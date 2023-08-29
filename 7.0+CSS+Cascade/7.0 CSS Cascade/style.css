@@ -1,0 +1,30 @@
+/* Don't change the existing CSS. */
+/*
+1. make sure the "white text" is white
+2. show the "white text" inside a red <div>
+3. the enclosing <div> should be purple
+4. there should be 10px of padding around the borders.
+*/
+
+.box {
+  background-color: blue;
+  padding: 10px;
+}
+
+p {
+  color: yellow;
+  margin: 0;
+  padding: 0;
+}
+
+.white-text{
+  color: white;
+}
+
+.inner-box{
+  background-color: red;
+}
+
+#outer-box{
+  border: 10px solid purple;
+}
