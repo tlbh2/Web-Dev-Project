@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mondrian Project</title>
+  <style>
+    /* 
+    Write your CSS here 
+    Gap Colour: #000
+    White: #F0F1EC
+    Red: #E72F24
+    Black: #232629
+    Blue: #004592
+    Yellow: #F9D01E
+
+    For dimensions, see dimensions.png image.
+    HINT: Remember you can't change the properties of grid lines.
+    But grid lines are transparent!
+    */
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh; /* Make the body take up the full viewport height */
+      display: flex;
+      justify-content: center; /* Horizontally center content */
+      align-items: center; /* Vertically center content */
+      
+    }
+
+    .container{
+      background-color: black;
+      height: 748px;
+      width: 748px;
+      
+      display: grid;
+      gap: 9px;
+      grid-template-columns: 320px 198px 153px 50px;
+      grid-template-rows: 414px 130px 155px 20px;
+      
+    }
+    .item{
+      background-color: orange;
+    }
+    .red{
+      background-color: #E72F24;
+      grid-area: 1 / 1 / 2 / 2;
+    }
+    .blue{
+      background-color: #004592;
+      grid-area: 2 / 4 / 3 / 5;
+      border-bottom: 10px solid black;
+    }
+    .yellow{
+      background-color: #F9D01E;
+      grid-area: 4 / 2 / 5 / 3;
+    }
+    .black{
+      background-color: #232629;
+      grid-area: 4 / 3 / 5 / 4;
+    }
+    .white-1{
+      background-color: #F0F1EC;
+      grid-area: 1 / 2 / 2 / 5;
+    }
+    .white-2{
+      background-color: #F0F1EC;
+      grid-area: 2 / 1 / 4 / 2;
+    }
+    .white-3{
+      background-color: #F0F1EC;
+      grid-area: 2 / 2 / 4 / 4;
+    }
+    .white-4{
+      background-color: #F0F1EC;
+      grid-area: 3 / 4 / 5 / 5;
+    }
+    .white-5{
+      background-color: #F0F1EC;
+      grid-area: 4 / 1 / 5 / 2;
+    }
+    
+  </style>
+</head>
+
+<body>
+  <!-- Write your HTML here -->
+  <div class="container">
+    <div class="white-1"></div>
+    <div class="white-2"></div>
+    <div class="white-3"></div>
+    <div class="white-4"></div>
+    <div class="white-5"></div>
+    <div class="red"></div>
+    <div class="blue"></div>
+    <div class="yellow"></div>
+    <div class="black"></div>
+  </div>
+</body>
+
+</html>
