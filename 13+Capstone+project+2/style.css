@@ -1,0 +1,23 @@
+#heroSection {
+    background-color: #5C469C;
+}
+
+.background-container {
+    background-image: url('./image/purple-night.jfif'); /* Replace with the actual path to your image */
+    background-size: cover; /* Adjust how the image covers the container */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    background-position: center center; /* Center the image horizontally and vertically */
+    /* You can add more background properties as needed */
+}
+
+h1{
+    color: #5C469C;
+    font-size: 5.625rem;
+    margin: 50px auto 0 auto;
+    font-family: "Sacramento", cursive;
+}
+
+.introduction{
+    color: #5C469C;
+    font-family: "Sacramento", cursive;
+}
