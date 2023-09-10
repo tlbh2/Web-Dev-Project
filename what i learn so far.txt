@@ -1,0 +1,7 @@
+section 16: The Document Object Model DOM
+	116. Intro to DOM model
+		- methods are thing that objects can do, has to be associated with an object
+	120. The Separation of Concerns: Structure vs Style vs Behaviour
+		- html is for content only, CSS for styling, and Javascript for behavior
+	121. Text Manipulation and the Text Content Property
+		- things that go inside JavaScript function in console has to be a string "string" for it to understand
