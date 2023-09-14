@@ -5,3 +5,21 @@ section 16: The Document Object Model DOM
 		- html is for content only, CSS for styling, and Javascript for behavior
 	121. Text Manipulation and the Text Content Property
 		- things that go inside JavaScript function in console has to be a string "string" for it to understand
+
+Section 24: Express.js with Node.js
+	203. HTTP Requests
+		- Request Vocab
+			+ GET: request resource, send 1 thing
+			+ POST: Sending resource, send multiple things
+			+ PUT: Replace resource, replace everything
+			+ PATCH: Patch up a resource, can change only one thing
+			+ DELETE: Delete resource
+		- make sure to choose Git Bash as command terminal
+		- "npm i -g nameOfPackage" -g indicate that the packet will be install globally on the computer
+		- req = request : sending sth to server-side
+		- res = respond : sending sth to client-side
+	206. Custome Middleware
+		- Pre-processing: body-parser
+		- authenthication
+		- logging : morgan
+		- error
