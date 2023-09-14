@@ -23,3 +23,8 @@ Section 24: Express.js with Node.js
 		- authenthication
 		- logging : morgan
 		- error
+
+Section 25: EJS
+	209. What is EJS?
+		- when run, it will automatically find folder "views" then look for index.ejs
+		- when have index.ejs, dont include html file in the folder if not the page will load but it's blank
