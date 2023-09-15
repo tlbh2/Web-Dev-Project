@@ -28,3 +28,10 @@ Section 25: EJS
 	209. What is EJS?
 		- when run, it will automatically find folder "views" then look for index.ejs
 		- when have index.ejs, dont include html file in the folder if not the page will load but it's blank
+	210. EJS tags
+		- footer.ejs and header.ejs need to be in the same folder as index.ejs which is "views" in order for it to work
+	211.
+		- when "nodemon" or "node index.js" and the browser keep loading but nothing appear then check the app.get in index.js wether there is any content exist .
+		- in Express, you can only send one response per request. Using two or more will throw an error.
+	212. EJS partials and layouts
+		- app.use(express.static("public"));  //link up static file such as images,css (if not working as intended, try deleting the "/" before "public")
