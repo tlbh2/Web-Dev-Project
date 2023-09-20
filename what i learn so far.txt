@@ -35,3 +35,9 @@ Section 25: EJS
 		- in Express, you can only send one response per request. Using two or more will throw an error.
 	212. EJS partials and layouts
 		- app.use(express.static("public"));  //link up static file such as images,css (if not working as intended, try deleting the "/" before "public")
+
+Section 30: Build Your Own Api
+	235. Creating GET Routes
+		 var id = parseInt(req.params.id);
+		 var content = jokes.find((joke) => (joke.id === id));
+		- id on the left of the === is attribute from list "jokes", id on the right is var id on top
