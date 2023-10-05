@@ -41,3 +41,9 @@ Section 30: Build Your Own Api
 		 var id = parseInt(req.params.id);
 		 var content = jokes.find((joke) => (joke.id === id));
 		- id on the left of the === is attribute from list "jokes", id on the right is var id on top
+
+Section 33: MongoDB
+	250. MongoDB CRUD operations in the shell: Create
+		- https://www.mongodb.com/docs/manual/crud/
+	255. Working with the Native MongoDB Driver
+		- https://mongodb.github.io/node-mongodb-native/3.5/quick-start/quick-start/
