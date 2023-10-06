@@ -47,3 +47,11 @@ Section 33: MongoDB
 		- https://www.mongodb.com/docs/manual/crud/
 	255. Working with the Native MongoDB Driver
 		- https://mongodb.github.io/node-mongodb-native/3.5/quick-start/quick-start/
+
+Section 35: Put everything together
+	264. Let's take the ToDoList Project to the Next Level and Connect it with Mongoose
+		- when connect to mongodb database, make sure the link is "mongodb://127.0.0.1:27017/todolistDB" not "mongodb://localhost:27017/todolistDB"
+		- double check on ip address 127.0.0.1:27017 and cross checking it on command prompt after running "mongosh"
+		- mongoose.connect("mongodb://127.0.0.1:27017/todolistDB");
+	265. Rendering Database Items in the ToDoList App
+		- in case when refreshing a webpage and default items keep adding to the list on the webpage, check "todolist-v2-starting-files", at the app.get function
