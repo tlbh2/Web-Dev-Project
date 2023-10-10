@@ -58,3 +58,7 @@ Section 35: Put everything together
 	267. Deleting Items from our ToDoList Database
 		- add "onChange="this.form.submit()" to <input> when ticking a checkbox = submit form
 		- sometime it only need to stop the port Ctrl+C and then node the app again when error persist
+	270. Revisiting Lodash and Deleting Items from Custom ToDo Lists
+		- <input> has attribute [value] and [type = "hidden"] in case I wanna pass more input value in a <form>
+		- Mongoose delete an array element in docmuent and save (check delete function and its post route in todolistv2)
+		- 
