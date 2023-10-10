@@ -36,7 +36,12 @@ const item3 = new Item({
 
 const defaultItems = [item1, item2, item3];
 
+const listSchema = {
+  name : String,
+  items : [itemsSchema]
+}
 
+const List = mongoose.model("List", listSchema);
 
 app.get("/", function(req, res) {
 
@@ -56,28 +61,81 @@ app.get("/", function(req, res) {
     }
   })
   .catch(function(err){
-    //render that 
+    //render list.ejs with params
     res.render("list", {listTitle: "Today", newListItems: foundItems});
+  });
+
+});
+
+//custome route
+app.get("/:customListName", function(req,res){
+  const customListName = req.params.customListName;
+  
+  List.findOne({ name: customListName }) 
+  .then(function (foundList) {
+    if (!foundList) {  // Checks if list is found
+      const list = new List({
+        name: customListName,
+        items: defaultItems
+      });
+      list.save();
+      res.redirect("/" + customListName);
+      console.log("Created new list with default items");
+    } else {
+      //render list.ejs
+      res.render("list", {listTitle: foundList.name, newListItems: foundList.items});
+      console.log("List already exists");
+    }
+  })
+  .catch(function (err) {
+    console.log(err);
   });
 
 });
 
 app.post("/", function(req, res){
 
-  const item = req.body.newItem;
+  const itemName = req.body.newItem;
+  const listName = req.body.list;
 
-  if (req.body.list === "Work") {
-    workItems.push(item);
-    res.redirect("/work");
-  } else {
-    items.push(item);
+  const item = new Item({
+    name: itemName
+  });
+
+    //check wether it is a default page or custom page
+  if (listName === "Today"){
+    //save item to mongodb
+    item.save();
+    //redirect to homepage so that it get display
     res.redirect("/");
+  }else{
+    List.findOne({ name: listName }) 
+      .then(function (foundList) {
+        foundList.items.push(item);
+        foundList.save();
+        res.redirect("/" + listName);
+      })
+      .catch(function (err) {
+        console.log(err);
+      });
   }
+
 });
 
-app.get("/work", function(req,res){
-  res.render("list", {listTitle: "Work List", newListItems: workItems});
+app.post("/delete", function(req, res){
+  const checkedItemid = req.body.checkbox;
+  Item.findByIdAndRemove(checkedItemid)
+    .then(function () {
+      console.log("successfully deleted checked item");
+    })
+    .catch(function (err) {
+      console.log(err);
+    });
+ 
+  res.redirect("/");
 });
+
+
 
 app.get("/about", function(req, res){
   res.render("about");
