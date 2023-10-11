@@ -28,6 +28,7 @@ app.use(passport.session());
 
 //connect to local database by mongodb
 mongoose.connect("mongodb://127.0.0.1:27017/userDB");
+//mongoose.connect("mongodb+srv://tinlao:laotrungtin@cluster0.oxpatx9.mongodb.net/todolistDB");
 
 //an object that created from Schema class of mongodb
 const userSchema = new mongoose.Schema({
