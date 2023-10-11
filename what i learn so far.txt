@@ -65,4 +65,17 @@ Section 35: Put everything together
 Section 36: Deploying your web application
 	-host database on mongodb Atlas, webpage on 
 	- on mongodb Atlas, username: tinlao, password: laotrungtin
-		- 
+
+Section 37: Authentication and Security
+	- Encryption level:	
+		level 1. username and password only
+		level 2. encryption to password field
+		level 3. hashing password with md5
+		level 4. salting and hashing passwords with bcrypt
+		level 5. Using Passport.js to Add Cookies and Sessions
+	- new package for encryption and authentication: mongoose-encryption
+		+ in case only wanted to do encryption on certain data such as password, add "encryptedFields: ["password"]" at the end of plugin for encrypt
+	- new package for environment variable file 
+		+ Error: Authentication code missing (Mongoose-encryption)
+			https://stackoverflow.com/questions/61316947/error-authentication-code-missing-mongoose-encryption
+	- new package for hashing: md5
