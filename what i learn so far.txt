@@ -79,3 +79,8 @@ Section 37: Authentication and Security
 		+ Error: Authentication code missing (Mongoose-encryption)
 			https://stackoverflow.com/questions/61316947/error-authentication-code-missing-mongoose-encryption
 	- new package for hashing: md5
+
+Section 38: React.js
+	302. Introduction to JSX and Babel
+		- <div id="root"></div> everything created with React will be inserted inside this div
+	
